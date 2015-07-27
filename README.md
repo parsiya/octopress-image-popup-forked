@@ -26,7 +26,7 @@ To use an image use the following tag:
 
 I save all pictures in `octopress/images/`. Image path is relative to the original octopress installation folder.
 
-## License (I am not good with this)  
+## License (I am not good at this)  
 The original code used a "[3 clause BSD license][bsd3license]" so I guess I am using the same thing.
 
 [bsd3license]: http://opensource.org/licenses/BSD-3-Clause

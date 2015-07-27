@@ -5,19 +5,19 @@ This is a fork of the the Octopress Image Popup Plugin at [https://github.com/ct
 ## Installation Instructions
 For more information please refer to the [original repository][original repo]. My only modification in installation instructions is loading jQuery js files over HTTPS. The original instructions used HTTP.
 
-Edit `octopress/Gemfile` and add the following gems:
+1) Edit `octopress/Gemfile` and add the following gems:
 
     gem 'erubis'
     gem 'mini_magick'
 
 Don't forget `bundle install`. You also need the `Image Magick` package.
 
-Modify `sources/_includes/custom/head.html` and add the following lines"
+2) Modify `sources/_includes/custom/head.html` and add the following lines"
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
-Copy `img_popup.html.erb` and `img_popup.rb` to `octopress/plugins`.
+3) Copy `img_popup.html.erb` and `img_popup.rb` to `octopress/plugins`.
 
 ## How do I insert images?
 To use an image use the following tag:

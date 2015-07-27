@@ -1,49 +1,33 @@
 # Octopress Image Popup Plugin Forked
 
-This is a fork of the the Octopress Image Popup Plugin at [https://github.com/ctdk/octopress-image-popup](https://github.com/ctdk/octopress-image-popup). The original instructions did not work for me out of the box so I made some minor changes.
+This is a fork of the the Octopress Image Popup Plugin at [https://github.com/ctdk/octopress-image-popup][original repo]. The original instructions did not work for me out of the box so I made some minor changes.
 
-## Installation
-I have copy/pasted the original instructions. My comments will be starting with `
-Add these lines to your blog's `Gemfile`:
+## Installation Instructions
+For more information please refer to the [original repository][original repo]. My only modification in installation instructions is loading jQuery js files over HTTPS. The original instructions used HTTP.
+
+Edit `octopress/Gemfile` and add the following gems:
 
     gem 'erubis'
     gem 'mini_magick'
 
-`mini_magick`, in turn, requires that the Image Magick *mogrify*(1) command
-be installed and in your path.
+Don't forget `bundle install`. You also need the `Image Magick` package.
 
-The gem also relies on both jQuery and jQuery UI. Add these lines to your
-blog's `sources/_includes/custom/head.html` file:
+Modify `sources/_includes/custom/head.html` and add the following lines"
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
 
-Finally, copy `img_popup.rb` and `img_popup.html.erb` to your blog's
-`plugins` directory.
+Copy `img_popup.html.erb` and `img_popup.rb` to `octopress/plugins`.
 
-## Usage
+## How do I insert images?
+To use an image use the following tag:
 
-The plugin implements a [Liquid][] template tag. The tag syntax is
-straighforward:
+    {% imgpopup /images/pew.jpg 50% pew pew %}
 
-    {% imgpopup /path/to/image percent% [title] %}
+I save all pictures in `octopress/images/`. Image path is relative to the original octopress installation folder.
 
-The image path is relative to the source directory. The percent argument is the
-amount to scale the image down for the clickable preview. The optional title is
-put in the title bar of the modal popup. Here’s a real example:
+## License (I am not good with this)  
+The original code used a "[3 clause BSD license][bsd3license]" so I guess I am using the same thing.
 
-    {% imgpopup /images/bigimage.png 50% My Big Image %}
-
-To use the image resizing functionality, set image_resize_size in in _config.yml to the minimum size, in KB, a file has to be before it will be resized. You may also set a maximum resize percentage with image_resize_percent_limit, so that (for example) if image_resize_percent_limit were set to 80, specifying 90% would leave the image alone. You must set a minimum file resizing size however if you want the images resized, even if that file size is 0. The example below would set image_resize_size to 50KB, and image_resize_percent_limit to 80%:
-
-image_resize_size: 50
-image_resize_percent_limit: 80
-
-## License
-
-This plugin is licensed under a [3 clause BSD license][bsd-license]
-
-[blog-image-popup]: http://brizzled.clapper.org/blog/2012/02/05/a-simple-octopress-image-popup-plugin/
-[Octopress]: http://octopress.org/
-[Liquid]: https://github.com/Shopify/liquid
-[bsd-license]: http://opensource.org/licenses/BSD-3-Clause
+[bsd3license]: http://opensource.org/licenses/BSD-3-Clause
+[original Repo]: https://github.com/ctdk/octopress-image-popup

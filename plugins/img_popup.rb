@@ -107,6 +107,9 @@ module Jekyll
       image.resize "#{@percent}%"
       vars['scaled_width'] = image[:width]
       vars['scaled_height'] = image[:height]
+      
+      # add an space between popup title and "close" link
+      vars['title'] += " "
 
       # Are we resizing the image?
       # Don't resize the image if image_resize_size is nil or the percentage to

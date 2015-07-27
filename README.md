@@ -2,6 +2,8 @@
 
 This is a fork of the the Octopress Image Popup Plugin at [https://github.com/ctdk/octopress-image-popup][original repo]. The original instructions did not work for me out of the box so I made some minor changes.
 
+Blog post is at [http://parsiya.net/blog/2015-07-26-image-popup-and-octopress/][blog post].
+
 ## Installation Instructions
 For more information please refer to the [original repository][original repo]. My only modification in installation instructions is loading jQuery js files over HTTPS. The original instructions used HTTP.
 
@@ -31,3 +33,4 @@ The original code used a "[3 clause BSD license][bsd3license]" so I guess I shou
 
 [bsd3license]: http://opensource.org/licenses/BSD-3-Clause
 [original Repo]: https://github.com/ctdk/octopress-image-popup
+[blog post]: http://parsiya.net/blog/2015-07-26-image-popup-and-octopress/

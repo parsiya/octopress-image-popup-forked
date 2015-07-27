@@ -1,11 +1,9 @@
-# Octopress Image Popup Plugin
+# Octopress Image Popup Plugin Forked
 
-This repository contains a plugin for generating a modal popup window for images with a resized thumbnail for the [Octopress][] blogging engine. It is adapted from the image popup plugin at https://github.com/bmc/octopress-plugins, but will generate a smaller thumbnail rather than relying on the browser to resize the image.
-
-See [A Simple Octopress Image Popup Plugin][blog-image-popup] for more discussion of the original plugin. This one operates almost identically, with minor differences noted below.
+This is a fork of the the Octopress Image Popup Plugin at [https://github.com/ctdk/octopress-image-popup](https://github.com/ctdk/octopress-image-popup). The original instructions did not work for me out of the box so I made some minor changes.
 
 ## Installation
-
+I have copy/pasted the original instructions. My comments will be starting with `
 Add these lines to your blog's `Gemfile`:
 
     gem 'erubis'
